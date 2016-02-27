@@ -1,0 +1,283 @@
+/* Configs */
+@header_color: #1c4489;
+@text_color: #fff;
+@active_color: #1e4388;
+@main_font_family: 'Fira Sans', sans-serif;
+@copyright_text_font_family: 'Lato', sans-serif;
+
+/* Base */
+*{
+	text-align: center;
+	font-family: @main_font_family;
+}
+
+/* Layout */
+.main-menu, .requirest-block{
+	background: @header_color;
+}
+
+.banner-block{
+	background: url('../images/banner.jpg');
+	height: 60vh;
+	width: 100%;
+	background-size: cover;
+	position: relative;
+
+	h1{
+		font-size: 4rem;
+	}
+
+	h2{
+		font-size: 2.5rem;
+		font-weight: 400;
+		margin-top: 10px;
+	}
+}
+
+.statistics-block{
+	background: @header_color;
+}
+
+.benefits-block{
+	color: @active_color;
+	padding: 3%;
+
+	.fa{
+		font-size: 3rem;
+	}
+	article{
+		padding-top: 3%;
+	}
+}
+
+.testimonials-block{
+	background: url('../images/testimonials-img.jpg');
+	height: 60vh;
+	width: 100%;
+	background-size: cover;
+	position: relative;
+	color: @text_color;
+	padding: 3%;
+}
+
+.requirest-block{
+	color: @text_color;
+	padding-top: 2%;
+	padding-bottom: 5%;
+}
+
+footer{
+	background: #000;
+	color: @text_color;
+	padding-top: 2%;
+	padding-bottom: 5%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+/* Modules */
+.logo{
+	padding: 3%;
+}
+
+.menu-pills>li>a{
+	border-radius: 0;
+	color: @text_color;
+
+	&:hover,
+	&:focus{
+		background: @header_color;
+	}
+}
+
+.menu-pills li:not(:last-child){
+	padding-right: 40px;
+}
+
+.main-menu{
+	padding-right: 3%;
+	padding-left: 10%;
+}
+
+.dropdown-pills{
+	background: #133166;
+	min-width: 684px;
+	padding: 20px;
+	margin: 0;
+	border-radius: 0;
+
+	li>a{
+		color: @text_color;
+		font-weight: 400;
+		font-size: 1.2rem;
+		text-shadow: none;
+		padding: 10px;
+	}
+}
+
+.consultation-button{
+	padding: 10px 30px;
+	margin-top: 10px;
+	border-radius: 0;
+	border: 2px solid @text_color; 
+	background: transparent;
+	color: @text_color;
+}
+
+.banner-info{
+	color: @text_color;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	padding-top: 3%;
+}
+
+.learn-more-btn{
+	padding: 10px 30px;
+	border-radius: 0;
+	border: 2px solid @text_color; 
+	background: transparent;
+	color: @text_color;
+}
+
+.statistics-info{
+	color: @text_color;
+	padding: 5%;
+}
+
+.statistics-numbers{
+	font-size: 3.748rem;
+}
+
+.statistics-text{
+	font-size: 1.561rem;
+}
+
+.benefits-info h2{
+	font-size: 2rem;
+}
+
+.text-slider{
+	width: 600px;
+	position: absolute;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.requirest-form{
+	input{
+		border-radius: 0;
+		height: 27px;
+	}
+
+	label{
+		font-weight: 500;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+.submit-button{
+	cursor: pointer;
+	border-radius: 0;
+	background: #fff;
+	color: @active_color;
+	padding: 10px 15px;
+	margin-left: 20px;
+}
+
+.footer-logo{
+	padding-bottom: 20px;
+}
+
+.copyright{
+	font-family: @copyright_text_font_family;
+}
+
+/* State */
+a:focus,
+a:hover{
+	text-decoration: none;
+	color: inherit;
+	opacity: .8;
+}
+
+.nav .open-menu>a,
+.nav .open-menu>a:focus,
+.nav .open-menu>a:hover{
+	background-color: transparent;
+	border-bottom: 5px solid #115fd4;
+}
+
+.consultation-button:hover,
+.learn-more-btn:hover{
+	background: #fff;
+	color: @active_color;
+	border: 1px solid #fff;
+}
+
+.submit-button:hover{
+	opacity: .8;
+	color: active_color;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+
+	h1{
+		font-size: 2rem;
+	}
+	
+	.logo{
+		width: 60%;
+	}
+
+	.dropdown-pills{
+		min-width: 120px;
+	}
+
+	.banner-block{
+		h1{
+		font-size: 2rem;
+	}
+		h2{
+		font-size: 1.5rem;
+	}
+}
+	.statistics-info{
+		padding: 2%;
+	}
+
+	.requirest-form{
+		width: 70%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 992px) {
+	.dropdown-pills{
+		min-width: 120px;
+	}
+
+	.requirest-form{
+		width: 50%;
+		text-align: center;
+
+		input{
+			margin: 20px;
+		}
+	}
+
+	.submit-button{
+		width: 55%;
+	}
+}
