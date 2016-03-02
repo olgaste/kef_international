@@ -1,0 +1,7 @@
+.non-ie{
+	display: none;
+}
+
+.for-ie{
+	display: block;
+}
