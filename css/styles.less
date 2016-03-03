@@ -148,27 +148,27 @@ footer{
 	bottom: 0;
 	margin: auto;
 	padding-top: 3%;
-}
 
-.learn-more-btn{
-	padding: 10px 30px;
-	border-radius: 0;
-	border: 2px solid @main_color; 
-	background: transparent;
-	color: @main_color;
+	.learn-more-btn{
+		padding: 10px 30px;
+		border-radius: 0;
+		border: 2px solid @main_color; 
+		background: transparent;
+		color: @main_color;
+	}
 }
 
 .statistics-info{
 	color: #fff;
 	padding: 5%;
-}
 
-.statistics-numbers{
-	font-size: 3.748rem;
-}
+	.statistics-numbers{
+		font-size: 3.748rem;
+	}
 
-.statistics-text{
-	font-size: 1.561rem;
+	.statistics-text{
+		font-size: 1.561rem;
+	}
 }
 
 .benefits-info{
@@ -182,35 +182,37 @@ footer{
 .text-slider{
 	width: 685px;
 	margin: 0 auto;
-}
 
-.text-slider-slide{
-	margin-top: 60px;
-}
+	.text-slider-slide{
+		margin-top: 60px;
+	}
 
-.arrow-left-btn{
-	position: relative;
-	left: -30px;
-	width: 36px;
-	height: 36px;
-	border-radius: 0;
-	border: 1px solid @main_color; 
-	background: transparent;
-	color: @main_color;
-}
+	.arrow-left-btn{
+		position: absolute;
+		right: 50%;
+		width: 36px;
+		height: 36px;
+		border-radius: 0;
+		border: 1px solid @main_color; 
+		background: transparent;
+		color: @main_color;
+		z-index: 2;
+		margin-right: 7px;
+	}
 
-.arrow-right-btn{
-	position: absolute;
-	left: 350px;
-	right: 0;
-	bottom: 0;
-	top: 0;
-	width: 36px;
-	height: 36px;
-	border-radius: 0;
-	border: 1px solid @main_color; 
-	background: transparent;
-	color: @main_color;
+	.arrow-right-btn{
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		top: 0;
+		width: 36px;
+		height: 36px;
+		border-radius: 0;
+		border: 1px solid @main_color; 
+		background: transparent;
+		color: @main_color;
+		margin-left: 7px;
+	}
 }
 
 .requirest-form{
@@ -225,15 +227,15 @@ footer{
 		padding-right: 10px;
 		padding-left: 10px;
 	}
-}
 
-.submit-button{
-	cursor: pointer;
-	border-radius: 0;
-	background: @main_color;
-	color: @active_color;
-	padding: 10px 15px;
-	margin-left: 20px;
+	.submit-button{
+		cursor: pointer;
+		border-radius: 0;
+		background: @main_color;
+		color: @active_color;
+		padding: 10px 15px;
+		margin-left: 20px;
+	}
 }
 
 .footer-logo{
@@ -269,6 +271,10 @@ a:hover{
 	border-bottom: 5px solid #115fd4;
 }
 
+ul.menu-pills li.open-menu:hover .dropdown-pills{
+	display: block;
+}
+	
 .consultation-button:focus,
 .learn-more-btn:focus,
 .arrow-left-btn:focus,
@@ -299,8 +305,8 @@ a:hover{
 @media (max-width: 991px) {
 
 	.menu-pills>li>a{
-		width: 55%;
-		padding: 15px 2px 0 2px;
+		padding: 15px 10px 0 2px;
+    	font-size: 1.2rem;
 	}
 	
 	.dropdown-pills{
@@ -308,7 +314,7 @@ a:hover{
 	}
 
 	.text-slider-slide{
-	margin-top: 10px;
+		margin-top: 50px;
 	}
 	
 	.requirest-form{
@@ -318,10 +324,10 @@ a:hover{
 		input{
 			margin: 10px;
 		}
-	}
-
-	.submit-button{
-		width: 55%;
+	
+		.submit-button{
+			width: 55%;
+		}
 	}
 }
 
@@ -334,6 +340,18 @@ a:hover{
 	.logo img{
 		width: 60%;
 	}
+
+	.mobile-menu-button{
+		border: 1px solid #fff;
+		background: #fff;
+		color: @active_color;
+		border-radius: 3px;
+		padding: 3px;
+		font-size: 16px;
+		width: 30px;
+		text-align: center;
+		margin: 10px auto;
+	}
 	
 	.menu-pills {
 		position: static;
@@ -341,6 +359,7 @@ a:hover{
 		
 		li>a{
 			padding: 2px;
+			margin: 0 auto;
 		}
 	}
 	
@@ -364,11 +383,11 @@ a:hover{
 
 	.statistics-info{
 		padding: 2%;
-	}
-
-	.statistics-numbers,
-	.statistics-text{
-		font-size: 1.5rem;
+	
+		.statistics-numbers,
+		.statistics-text{
+			font-size: 1.5rem;
+		}
 	}
 
 	.text-slider{
@@ -376,51 +395,21 @@ a:hover{
 		font-size: 1.2rem;
 	}
 
-	.arrow-left-btn{
-		position: absolute;
-		left: -60px;
-		top: -50px;
-	}
-
-	.arrow-right-btn{
-		left: -20px;
-		top: -50px;
-	}
-
 	.requirest-form{
-		display: none;
-	}
+		width: 90%;
+		margin-left: 0;
 
-	.requirest-form-xs{
-		input{
-			border-radius: 0;
-			height: 27px;
+		label{
+			display: none;
 		}
 
-		.submit-button-xs{
-			cursor: pointer;
-			border-radius: 0;
-			background: #fff;
-			color: @active_color;
-			padding: 10px 15px;
+		input{
+			margin: 20px;
+		}
+
+		.submit-button{
 			width: 100%;
 		}
-	}
-
-	.menu-pills{
-		display: none;
-	}
-
-	.mobile-menu-button{
-		border: 1px solid #fff;
-		background: #fff;
-		color: @active_color;
-		border-radius: 3px;
-		padding: 3px;
-		font-size: 16px;
-		width: 30px;
-		text-align: center;
-		margin: 10px auto;
 	}
 }
 
